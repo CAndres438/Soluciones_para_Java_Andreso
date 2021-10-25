@@ -1,0 +1,71 @@
+Reto 2: Grupo P46_C2
+ Número máximo de ficheros: 4
+Tipo de trabajo:  Individual
+Un grupo empresario del gremio cafetero quiere encomendarle el desarrollo de un pequeño demo informático para las tiendas de café. A continuación se  relaciona la información proporcionada por la organización:
+
+Sin importar el tipo de café, todos tienen un consecutivo, un valor por libra y algo que indica si está molido o viene en grano entero. Si se parte de su materia prima, la tipología del café depende del grano, por lo que se distinguen dos grandes tipos de semillas: arábigas y robustas. El café arábigo es mucho más comercial, tiene mejor aroma e intensidad, se le distingue un origen, y por lo general, se le empaca en diferentes colores. El café robusta es mucho más fácil de cultivar y barato de producir, y se le empaca en diferentes cantidades.
+
+Considere la especificación del siguiente diagrama de clases para este reto: 
+
+ 
+
+Sobre el método ProcesarComandos:
+
+En la clase Inventario, se debe definir la función procesarComandos() que realiza las siguientes operaciones:
+
+Agregar café: Opción 1
+ + Se puede añadir un café arábigo con el siguiente comando:
+
+1&Arabigo&consecutivo&valor&molido&origen&color
+
+Ejemplo:  1&Arabigo&2&12000&true&Tolima&Rojo
+
++ Se puede añadir un café robusta con el siguiente comando:
+
+1&Robusta&consecutivo&valor&molido&cantidad
+
+Ejemplo: 1&Robusta&5&8000&false&2.5
+
+ 
+
+Listar ítems del inventario: Opción 2 
+Se debe mostrar la frase: “***Inventario de cafes***” Seguida por los cafés en el orden en el que fueron agregados.
+
++ Si se trata de un café arábigo se mostrará así (recuerde que “\t” implica incluir un espaciado amplio a la derecha):
+
+\t>Cafe Arabigo 
+
+\tConsecutivo: 5
+
+\tPrecio: $12000.0
+
+\tPresentacion: Molido
+
+\tOrigen: Tolima
+
+\tEmpaque: Rojo
+
++ Si se trata de un café robusta se mostrará así:
+
+\t>Cafe Robusta
+
+\tConsecutivo: 5
+
+\tPrecio: $8000.0
+
+\tPresentacion: Grano
+
+\tCantidad: 2.5 kg
+
+
+
+Salir: Opción 3
+
+Nota 1: Observe que el único comando que muestra datos por consola es listarCafes().
+Nota 2: En este ejercicio se requiere subir cuatro archivos:
+Uno correspondiente a la clase Café llamado Cafe.java,
+otro correspondiente al café arábigo llamado Arabigo.java
+otro correspondiente al café robusta llamado Robusta.java
+otro correspondiente al Inventario llamado Inventario.java (aquí va el main)
+Nota 3: Recuerde eliminar la línea de package al hacer el envío y si emplea la opción de "</> Editar" utilice el botón [+] para agregar más de un archivo de código fuente.
+Nota 4: Note que en la salida, al incio de la palabra Cafe se incluye el simbolo '>'. También se incluyen '$' y 'Kg' para ciertos atributos.  Recuerde no incluir tildes y tener presente los espacios entre valores.
