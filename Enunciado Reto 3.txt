@@ -1,0 +1,52 @@
+Reto 3: Grupo P46_C2
+ Número máximo de ficheros: 4
+Tipo de trabajo:  Individual
+El manejo de inventarios hace referencia al conjunto de procesos que involucran el suministro, accesibilidad y almacenamiento de las mercancías que una empresa mantiene en sus almacenes. Esto, con el objetivo de recopilar información de la entrada y de la salida de los productos, y para minimizar los tiempos y los costos. Dentro de los inventarios más comunes, están los inventarios de alimentos en los que se clasifica y se lleva el registro de los alimentos en las tiendas de aborrotes. Ejemplos de alimentos que pueden encontrarse en una tienda son: carne, pescado, cerdo, pollo, leche, yogur, manzana, pera, banano, mango, frijol, lenteja, arroz, avena, trigo.
+
+ 
+
+[1 punto] Se requiere de su apoyo para crear una clase llamada "Inventario.java" que implemente los siguientes métodos:
+[1 punto] Método "consultarAlimentos" que dada una lista con nombres de alimentos, retorne una lista de dichos nombres sin repetición.
+Por ejemplo, si en el inventario están los siguientes alimentos:
+
+[“carne”, “leche”, “trigo”, “trigo”, “trigo”, “carne”, “leche”, “leche”, “carne”, “leche”]
+
+ retorna la lista: [“carne”, “leche”, “trigo”]
+
+
+
+[1 punto] Método "consultarAlimentosParaCambio" que, dada una lista con los índices de los alimentos que vencieron, una lista con los nombres de alimentos vencidos y el nombre de un alimento para cambio, retorne la lista de los índices de los alimentos vencidos que coincidan con el alimento para cambio. 
+Por ejemplo, si se llama la función con los siguientes parámetros:
+
+consultarAlimentosParaCambio (  [1, 3, 6, 8],  [“carne”, “mango”, “frijol”, “leche”, “avena”, “carne”, “arroz”, “frijol”, “leche”, “avena”],  “leche” );
+
+La función debe retornar la lista [3,8]
+
+Note que los índices (posiciones en la lista) de los alimentos empiezan en cero (0).
+
+ 
+
+[1 punto] Función "cotejarStockTiendas" que dada dos listas l1 y l2, con los alimentos de la tienda 1 y de la tienda 2, respectivamente; retorna una lista con los alimentos que hay en l1 y que no hay en l2.
+Por ejemplo:
+
+cotejarStockTiendas( [“avena, “arroz”, “pera”, “leche”, “trigo”], [“pera”, “leche”, “mango”] ),
+
+retorna la lista: [“avena, “arroz”, “trigo”]
+
+ 
+
+[1 punto] Función "calcularIntercambios" que dadas dos listas l1 y l2, que continen los nombres de alimentos con sobrestock de la tienda 1 y de la tienda 2, respectivamente; cuenta el número de alimentos que pueden intercambiar las tiendas.
+Por ejemplo:
+
+calcularIntercambios ( [“avena, “arroz”, “trigo”], [“arroz”, “leche”, “mango”, “carne”] )
+
+retorna  new Integer(2).
+
+Si bien, a la tienda 1 le conviene intercambiar stock para abastecerse de “leche”, “mango” y “carne”, y a la tienda 2 le conviene abastecerse de” avena” y “trigo”; máximo se pueden intercambiar dos productos alimentarios. Tenga presente que la función debe retornar un Integer.
+
+ 
+
+Entrada:
+
+Este programa no requiere entrada, ni generará salida. Se requiere que se genere un archivo con el nombre Inventario.java con la implementación de los métodos listados. Tenga presente que debe mantener los nombres de los métodos y sus parámetros.
+

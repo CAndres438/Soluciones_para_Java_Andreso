@@ -1,0 +1,34 @@
+Reto 1: Grupo P46_C2
+ Número máximo de ficheros: 1
+Tipo de trabajo:  Individual
+
+Los 4 tipos de vacunas
+
+Las vacunas estimulan una respuesta inmune a un antígeno, una molécula que se encuentra en el virus. El antígeno es la proteína de espiga característica que se encuentra en la superficie del virus, que normalmente este usa para invadir las células humanas[1]. 
+
+ Actualmente hay 4 tipos de vacunas en desarrollo para combatir el covid-19, como se describe en la imagen de la derecha.
+
+En un modelo simulado por computadora se recrearon múltiples pruebas clínicas en las que se le administraba un tipo de vacuna diferente a un número base de ciudadanos americanos ubicados en Portland, Houston, Las Vegas y diferentes combinaciones de otras ciudades. Este modelo podía identificar el tipo de vacuna que había sido aplicada, a partir del número de candidatos que después de recibir una dosis presentaba al menos un síntoma/efecto secundario (fiebre, dolor muscular, escalofríos, etc.), como se muestra a continuación:
+
+Entre 0 y 20 candidatos con al menos un síntoma: vacuna tipo uno.
+Entre 21 y 30 candidatos con al menos un síntoma: vacuna tipo dos.
+Entre 31 y 50 candidatos con al menos un síntoma: vacuna tipo tres.
+Más de 50 candidatos con al menos un síntoma: vacuna tipo cuatro.
+
+
+
+Otro dato curioso que mostraba el modelo era que, las muestras de candidatos que radicaban en la misma ciudad y que presentaron al menos un efecto secundario se relacionaban entre sí, de la siguiente manera:
+
+Al restar 4 al número de candidatos de Houston, este valor correspondía con el doble de los candidatos ubicados en Portland. 
+Al sumar los candidatos de Houston y los candidatos de Portland se obtenía el quíntuple de los candidatos de Las Vegas. 
+Dado el número de candidatos de Portland con al menos un efecto secundario, realiza un programa que imprima en la primera línea y separados por un espacio, el número de candidatos ubicados en Portland, Houston y Las Vegas con al menos un efecto secundario. En la segunda línea, el tipo de vacuna que le fue administrado a los candidatos ubicados en Las Vegas.
+
+
+
+Entrada:
+
+La cantidad de candidatos de Portland con síntomas secundarios después de recibir una dosis de cierto tipo de vacuna.
+
+Salida:
+
+En la primera línea, tres números enteros correspondientes a la cantidad de candidatos de Portland, Houston y Las Vegas con síntomas secundarios después de recibir una dosis de cierto tipo de vacuna. En la segunda línea, el tipo de vacuna que recibieron los candidatos de Las Vegas.
