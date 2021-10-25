@@ -1,0 +1,150 @@
+Cortometrajes documentales
+
+Una escuela de cine local quiere que los ciudadanos tengan la posibilidad de acercarse a los cortometrajes documentales. En los últimos años este tipo de contenido ha venido ganando importancia y se presentan trabajos de mucha calidad en festivales internacionales muy prestigiosos. La escuela desea mantener información de los documentales, sus directores, los ciudadanos que se inscriben y las transmisiones que ven. El identificador único de un documental es auto numérico, tiene título, año en el que fue producido, debe tener un director y un país de origen. De los directores se desea almacenar su nombre, su apellido y su nacionalidad, y para identificarlo, se le asignará un código numérico. Las trasmisiones de la escuela tienen un identificador numérico, el nombre del usuario, el identificador del documental, y la fecha en la que fue transmitido. A los ciudadanos que se inscriben se les solicita un nombre de usuario, el nombre, el apellido, un email, un numero de contacto, una clave, y se guarda la fecha de registro.
+
+Por ahora, se requiere que usted construya un modelo de datos que permita almacenar y consultar de manera eficiente toda la información necesaria para el funcionamiento de la escuela. Esto quiere decir que usted debe construir:
+
+ El MER (Diagrama Entidad-Relación) ó el Modelo Relacional
+ Código SQL para generar dichas tablas, e inserción de datos:
+1. Crear los siguientes Contenidos (exactamente):
+Titulo: Close Ties
+Director: Zofia Kowalewska
+Origen: Polonia
+Año: 2016
+ Titulo: Pulse
+Director: Robin Petré
+Origen: Hungría
+Año: 2017
+Titulo: Rocknrollers
+Director: Daan Bol
+Origen: Países Bajos
+Año: 2018 
+Titulo: Learning to Skateboard in a Warzone
+Director: Carol Dysinger
+Origen: Gran Bretaña
+Año: 2019
+Titulo: Period. End of Sentence
+Director: Rayka Zehtabchi
+Origen: India
+Año: 2015
+
+2. Crear los siguientes Directores (exactamente):
+
+Zofia Kowalewska que es polaca
+Robin Petré que es francés
+Daan Bol que es neerlandés
+Carol Dysinger que es estadounidense
+Rayka Zehtabchi que es inraní
+
+
+3. Crear los siguientes Usuarios (exactamente)- El primero es el alias y el segundo es su nombre y apellido.  Los otros datos llenarlos libremente (recordar que el alias es la llave primaria):
+
+lucky, Pedro, Perez
+malopez, Maria, Lopez
+diva, Ana, Diaz
+dreamer, Luis, Rojas
+ninja, Andres, Cruz
+neon, Nelson, Ruiz
+rose, Claudia, Mendez
+green, Jorge, Rodriguez
+ 
+
+4. Registrar las siguientes transmisiones de películas y series de los siguientes usuarios:
+
+"lucky" vió "Close Ties"  el '2018-10-25 20:00:00'
+"lucky", vió "Pulse" el '2019-03-15 18:30:00'
+"lucky", vió "Rocknrollers" el '2019-05-20 20:30:00’
+"malopez" vió "Close Ties"  el '2018-05-20 20:30:00
+"malopez" vió "Rocknrollers" el '2020-01-20 20:30:00
+"diva" vió "Period. End of Sentence" el '2019-05-20 20:30:00
+"diva" vió "Rocknrollers" el '2018-06-22 21:30:00
+"diva" vió "Learning to Skateboard in a Warzone" el '2020-03-17 15:30:20'
+"dreamer" vió "Learning to Skateboard in a Warzone" el '2020-03-17 15:30:20'
+"dreamer", vió "Pulse" el '2020-04-10 18:30:20'
+"ninja", vió "Close Ties" el '2020-02-17 20:30:20'
+"ninja" vió "Rocknrollers" el '2020-02-20 16:30:20'
+"ninja" vió "Pulse" el '2020-03-27 18:30:20'
+"rose", vió " Rocknrollers " el '2020-03-20 21:30:20'
+"green" vió "Period. End of Sentence" el '2020-01-10 17:30:20'
+"green" vió "Pulse" el  '2020-02-15 20:30:20'
+"green" vió "Close Ties" el '2020-03-17 18:30:20'
+NOTA: Para la creación de cada una de las tablas e inserción de datos generar un script de sql (Un script por cada tabla)
+
+Ejemplo: Para crear la tabla director se debe crear el siguiente script:
+
+create table director(
+
+    dir_id  int primary key,
+
+    dir_nombre  char(20),
+
+    dir_apellido char(20),
+
+    dir_nacionalidad  char(40)
+
+);
+
+insert into director values (101, "Zofia "," Kowalewska", "polaca");
+
+insert into director values (102, "Robin", " Petré ", "Frances");
+
+insert into director values (103, " Daan ", "Bol", " neerlandés");
+
+insert into director values (104, "Carol", " Dysinger ", " estadounidense");
+
+insert into director values (105, " Rayka", " Zehtabchi", "iraní");
+
+ Nota: No deje líneas en blanco antes del create.
+
+
+
+4. Código SQL para Modificar  los siguientes datos:
+
+Cambiar  el año del cortometraje documental "Period. End of Sentence." por 2020.
+Cambiar el teléfono del usuario "ninja" por 3115678432
+ Borrar la transmisión del usuario "green" de la cortometraje documental "Pulse"
+ NOTA: Generar un archivo script sql para las modificaciones y borrados
+
+
+
+5.  Código SQL para Modificar  los siguientes datos:
+
+a)   Mostrar los títulos de todos los documentales ordenados alfabéticamente.
+
+b)   Mostrar la información de los documentales (título, director, país) que se han estrenado posteriormente al año 2019, ordenadas por título
+
+c)   Mostrar los títulos de documentales dirigidos por el director Daan Bol
+
+d)   Mostrar los títulos de los documentales que ha visto un usuario con alias "lucky", ordenadas por título.
+
+e)   Mostrar la información de los usuarios (alias, nombre y apellidos) que han visto la película "Period. End of Sentence" ordenados alfabéticamente
+
+f)     Mostrar cuantas documentales se han estrenado a partir del año 2018
+
+NOTA: Generar un archivo script sql para las consultas. Antes de cada consulta escribir SELECT 'Consulta #';  donde # es el número de la consulta.
+
+Ejemplo:
+
+Select 'Consulta 1';
+
+Select titulo from ....;
+
+Select 'Consulta 2';
+
+Select .....;
+
+Select 'Consulta 3';
+
+Select .....;
+
+
+
+ENTREGA
+
+Para la entrega es necesario:
+
+1. Subir cada uno de los archivos .sql en orden de ejecución. Es decir, primero se suben las tablas que no tienen Referencias (Llaves foráneas) y luego las demás.
+
+2. Luego de subir los scripts de sql de creación e inserción de datos, se debe subir el de actualizaciones y por último el de consultas.
+
+3. Luego se evalúa, igual que con los retos anteriores. Si todo esta correcto, tanto las inserciones, como las modificaciones y las consultas, se obtendrá una nota de 5/5. Si hay un error la evaluación será 0. Por lo que será necesario que revisen hasta que las salidas sean las correctas
